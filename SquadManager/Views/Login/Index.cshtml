@@ -1,0 +1,24 @@
+﻿@model SquadManager.Models.UserViewModel
+@{
+    Layout = null;
+}
+
+<link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
+<section>
+    <h1 class="login-text">Autenticação</h1>
+
+    <form action="/Login/Test" method="post">
+
+    <input class="login-input" type="text" id="email" name="email" value="@Model.Email" placeholder="Username/ e-mail"/>
+        <input class="login-input"  type="password" id="password" name="password" value="@Model.Password" placeholder="Senha" />
+        <a class="login-links" href="#">Esqueceu a senha?</a>
+
+    <button type="submit" onclick="Login(event);" style="cursor:pointer" >Login</button>
+
+    </form>
+    <label class="login-links">Não tem conta?</label><a class="login-links" href="#">Crie aqui</a></label>
+</section>
+<script src="~/js/login.js"></script>
+<a href="~/lib/jquery/dist/jquery.min.map">~/lib/jquery/dist/jquery.min.map</a>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
